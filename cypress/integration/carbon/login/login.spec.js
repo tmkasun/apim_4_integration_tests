@@ -53,7 +53,7 @@ describe("Basic login to carbon console", () => {
         }
     });
 
-    it.skip("Create user pool", () => {
+    it("Create user pool", () => {
         for (const [username, roles] of Object.entries(users)) {
             cy.get('.normal:nth-child(3) .normal:nth-child(2) li:nth-child(1) > .menu-default').click();
             cy.url().should('contains', 'https://localhost:9443/carbon/userstore/add-user-role.jsp');
