@@ -12,7 +12,7 @@ describe("Basic login to carbon console", () => {
         // login before each test
         cy.carbonLogin(username, password)
     })
-    it.skip("Create developer portal user", () => {
+    it("Create developer portal user", () => {
         cy.url().should('contains', 'https://localhost:9443/carbon/admin/index.jsp');
         cy.get('.normal:nth-child(3) .normal:nth-child(2) li:nth-child(1) > .menu-default').click();
         cy.url().should('contains', 'https://localhost:9443/carbon/userstore/add-user-role.jsp');
@@ -31,7 +31,7 @@ describe("Basic login to carbon console", () => {
 
     })
 
-    it("Delete users", () => {
+    it.skip("Delete users", () => {
         let i = Object.keys(users).length;
         while (i > 0) {
             cy.visit('https://localhost:9443/carbon/admin/index.jsp');

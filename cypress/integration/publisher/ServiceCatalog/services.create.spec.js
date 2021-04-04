@@ -3,8 +3,8 @@
 import { getSampleServiceMeta, getSampleOpenAPI } from '../../../support/mockData/serviceCatalog';
 import Utils from '../../../support/utils';
 
-const CARBON_ORIGIN = "https://localhost:8081"
-describe("API Create flow", () => {
+const CARBON_ORIGIN = Utils.getAppOrigin();
+describe("Service catalog create flow", () => {
     const username = 'admin'
     const password = 'admin'
     beforeEach(function () {

@@ -1,5 +1,7 @@
-const CARBON_ORIGIN = "https://localhost:8081"
-describe("API Create flow", () => {
+import Utils from "../../../support/utils";
+
+const CARBON_ORIGIN = Utils.getAppOrigin();
+describe("Service catalog delete flow", () => {
     const username = 'admin'
     const password = 'admin'
     beforeEach(function () {

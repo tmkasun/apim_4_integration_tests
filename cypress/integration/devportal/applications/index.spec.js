@@ -1,11 +1,11 @@
-describe("Basic login to carbon console", () => {
+describe("Developer portal smoke tests", () => {
     const username = 'admin'
     const password = 'admin'
     const appName = 'sample_app_4'
-    const numberOfApps = 35;
+    const numberOfApps = 1;
     beforeEach(function () {
         // login before each test
-        cy.portalLogin(username, password)
+        cy.loginToDevportal(username, password)
     })
     it.skip("Create an application", () => {
         cy.visit('https://localhost:9443/devportal/applications');

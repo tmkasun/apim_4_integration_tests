@@ -9,4 +9,8 @@ export default class Utils {
     static getRandomString() {
         return Math.random().toString(36).substring(4);
     }
+
+    static getAppOrigin(){
+        return "https://localhost:9443";
+    }
 }
